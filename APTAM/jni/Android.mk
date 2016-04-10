@@ -58,7 +58,7 @@ LOCAL_EXPORT_CXXFLAGS := $(LOCAL_CXXFLAGS) #export cpp flgs
 include $(BUILD_SHARED_LIBRARY)
  
 #define prebuilt lapack because this takes forever to build or even check if it should be rebuilt!!!
-ifeq (true,true) 
+ifeq (false,true) 
     include $(CLEAR_VARS)
     LOCAL_MODULE := lapack
     LOCAL_SRC_FILES := ../prebuild-libs/$(TARGET_ARCH_ABI)/liblapack.a
